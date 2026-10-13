@@ -1,0 +1,4 @@
+# PERLA ML Backend
+# The server is implemented with Python's built-in standard library (no external wheels required).
+# If deploying with Gunicorn or FastAPI in the future, you can uncomment below:
+# gunicorn>=21.2.0

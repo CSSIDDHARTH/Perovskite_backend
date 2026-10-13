@@ -1,0 +1,225 @@
+{
+  "criterion": "mean outer-CV RMSE (lower is better)",
+  "tie_rule": "winner is 'not clearly separated' from a rival if the mean paired per-fold RMSE gap is below 1 paired SE",
+  "best_direct": {
+    "model_id": "Direct|VotingOriginal",
+    "RMSE_mean": 3.348325591403379,
+    "RMSE_std": 0.04123196697999152,
+    "MAE_mean": 2.6424745469262763,
+    "R2_mean": 0.38049653432373554,
+    "Pearson_mean": 0.6181179556908002,
+    "mean_train_seconds": 38.166000000000004,
+    "not_clearly_separated_from": [
+      "Direct|VotingET"
+    ],
+    "cheapest_among_winner_and_tied": "Direct|VotingOriginal",
+    "comparison_with_rivals": [
+      {
+        "model_id": "Direct|VotingET",
+        "mean_rmse_gap": 0.003634905522679155,
+        "paired_se": 0.0037108786268657107,
+        "folds_best_wins": 3,
+        "n_folds": 5,
+        "not_clearly_separated": true
+      },
+      {
+        "model_id": "Direct|XGBoost",
+        "mean_rmse_gap": 0.013357645462452262,
+        "paired_se": 0.003547718733636044,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|HistGradientBoosting",
+        "mean_rmse_gap": 0.022837248153128265,
+        "paired_se": 0.002404179496791475,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|RandomForest",
+        "mean_rmse_gap": 0.06173784199456574,
+        "paired_se": 0.005997787819042639,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|ExtraTrees",
+        "mean_rmse_gap": 0.10286300947062613,
+        "paired_se": 0.01288633949769821,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      }
+    ],
+    "winner_is_clear": false
+  },
+  "best_two_stage": {
+    "model_id": "TwoStage[S1=HistGradientBoosting]|VotingET",
+    "RMSE_mean": 3.343702531133418,
+    "RMSE_std": 0.05491880982225601,
+    "MAE_mean": 2.6314285979052996,
+    "R2_mean": 0.38206268588874676,
+    "Pearson_mean": 0.618836300552634,
+    "mean_train_seconds": 223.12399999999997,
+    "not_clearly_separated_from": [],
+    "cheapest_among_winner_and_tied": "TwoStage[S1=HistGradientBoosting]|VotingET",
+    "comparison_with_rivals": [
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|VotingOriginal",
+        "mean_rmse_gap": 0.010249591317329988,
+        "paired_se": 0.002945097029933536,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|RandomForest",
+        "mean_rmse_gap": 0.021336544717460094,
+        "paired_se": 0.007044313198736085,
+        "folds_best_wins": 4,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|ExtraTrees",
+        "mean_rmse_gap": 0.021790582219540867,
+        "paired_se": 0.007960543636956365,
+        "folds_best_wins": 4,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|XGBoost",
+        "mean_rmse_gap": 0.02453283993924984,
+        "paired_se": 0.007498174612872988,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|HistGradientBoosting",
+        "mean_rmse_gap": 0.03508587812534829,
+        "paired_se": 0.004975160452604632,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      }
+    ],
+    "winner_is_clear": true
+  },
+  "best_overall": {
+    "model_id": "TwoStage[S1=HistGradientBoosting]|VotingET",
+    "RMSE_mean": 3.343702531133418,
+    "RMSE_std": 0.05491880982225601,
+    "MAE_mean": 2.6314285979052996,
+    "R2_mean": 0.38206268588874676,
+    "Pearson_mean": 0.618836300552634,
+    "mean_train_seconds": 223.12399999999997,
+    "not_clearly_separated_from": [
+      "Direct|VotingOriginal",
+      "Direct|VotingET"
+    ],
+    "cheapest_among_winner_and_tied": "Direct|VotingOriginal",
+    "comparison_with_rivals": [
+      {
+        "model_id": "Direct|VotingOriginal",
+        "mean_rmse_gap": 0.004623060269960622,
+        "paired_se": 0.010305953090854855,
+        "folds_best_wins": 3,
+        "n_folds": 5,
+        "not_clearly_separated": true
+      },
+      {
+        "model_id": "Direct|VotingET",
+        "mean_rmse_gap": 0.008257965792639776,
+        "paired_se": 0.008771088734099704,
+        "folds_best_wins": 3,
+        "n_folds": 5,
+        "not_clearly_separated": true
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|VotingOriginal",
+        "mean_rmse_gap": 0.010249591317329988,
+        "paired_se": 0.002945097029933536,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|XGBoost",
+        "mean_rmse_gap": 0.017980705732412883,
+        "paired_se": 0.009755043629682068,
+        "folds_best_wins": 3,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|RandomForest",
+        "mean_rmse_gap": 0.021336544717460094,
+        "paired_se": 0.007044313198736085,
+        "folds_best_wins": 4,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|ExtraTrees",
+        "mean_rmse_gap": 0.021790582219540867,
+        "paired_se": 0.007960543636956365,
+        "folds_best_wins": 4,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|XGBoost",
+        "mean_rmse_gap": 0.02453283993924984,
+        "paired_se": 0.007498174612872988,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|HistGradientBoosting",
+        "mean_rmse_gap": 0.027460308423088886,
+        "paired_se": 0.010786208319374182,
+        "folds_best_wins": 4,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "TwoStage[S1=HistGradientBoosting]|HistGradientBoosting",
+        "mean_rmse_gap": 0.03508587812534829,
+        "paired_se": 0.004975160452604632,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|RandomForest",
+        "mean_rmse_gap": 0.06636090226452636,
+        "paired_se": 0.013915217133297998,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      },
+      {
+        "model_id": "Direct|ExtraTrees",
+        "mean_rmse_gap": 0.10748606974058675,
+        "paired_se": 0.010115708141461352,
+        "folds_best_wins": 5,
+        "n_folds": 5,
+        "not_clearly_separated": false
+      }
+    ],
+    "winner_is_clear": false
+  },
+  "preliminary": false,
+  "caveat": "Selecting the minimum of several candidates from the same outer-CV scores makes the winner's CV score optimistic (selection bias). Nested CV was NOT run (computational cost). The validation-set score is an independent secondary check on data never used for fitting or ranking, but it does not remove the selection bias and is itself only independent while the configuration is not changed after seeing it.",
+  "run_id": "5fold_seed0_split42_675a0c14",
+  "n_train_rows": 24403,
+  "n_folds_run": 5,
+  "rule": "argmin of mean outer-CV RMSE within Direct, within TwoStage, and over both"
+}
