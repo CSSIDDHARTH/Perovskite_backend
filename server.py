@@ -426,8 +426,12 @@ class PerlaApiHandler(BaseHTTPRequestHandler):
         self.wfile.write(json.dumps({"error": f"Endpoint {path} not found"}).encode("utf-8"))
 
     def log_message(self, format, *args):
-        # Clean logging
-        sys.stderr.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {args[0]} - {args[1]} {args[2]}\n")
+        # Clean logging - use format % args to handle variable number of args safely
+        try:
+            message = format % args
+        except Exception:
+            message = format + " " + " ".join(str(a) for a in args)
+        sys.stderr.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] {message}\n")
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     """Handle requests in a separate thread."""
